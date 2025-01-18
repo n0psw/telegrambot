@@ -1,6 +1,7 @@
 import os
 from telegram import Update
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackContext
+from telegram.ext.filters import TEXT
 
 # Получаем токен из переменных окружения
 BOT_TOKEN = os.getenv("7282285914:AAG18ZqP_b_Ikii4lt2fR6StqltHukH3gU8")
@@ -49,7 +50,7 @@ def main():
     dispatcher = updater.dispatcher
 
     dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, submit_application))
+    dispatcher.add_handler(MessageHandler(TEXT & ~TEXT.command, submit_application))
     dispatcher.add_handler(CommandHandler("view", view_applications))
 
     updater.start_polling()
