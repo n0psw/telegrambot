@@ -3,8 +3,8 @@ from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 # Получаем токен из переменных окружения
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID", None)
+BOT_TOKEN = os.getenv("7282285914:AAG18ZqP_b_Ikii4lt2fR6StqltHukH3gU8")
+ADMIN_CHAT_ID = os.getenv("620838007", None)
 
 # Список для хранения заявок
 applications = []
