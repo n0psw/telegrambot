@@ -13,9 +13,9 @@ app = Flask(__name__)
 def home():
     return "Бот работает!"
 
-# Бот
-BOT_TOKEN = os.getenv("7282285914:AAG18ZqP_b_Ikii4lt2fR6StqltHukH3gU8")
-ADMIN_CHAT_ID = os.getenv("620838007", None)
+# Получаем токен и Chat ID из переменных окружения
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID")
 
 applications = []
 
